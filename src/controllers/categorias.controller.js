@@ -1,12 +1,7 @@
 import { pool } from '../db.js';
 
-<<<<<<< HEAD
 // Obtener todas las categorias
 export const obtenerCategorias= async (req, res) => {
-=======
-// Obtener todos las categorias
-export const obtenerCategorias = async (req, res) => {
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
   try {
     const [result] = await pool.query('SELECT * FROM Categorias');
     res.json(result);
@@ -18,7 +13,6 @@ export const obtenerCategorias = async (req, res) => {
   }
 };
 
-<<<<<<< HEAD
 // Obtener una categoria por su id
 export const obtenerCategoria = async (req, res) => {
   try {
@@ -38,8 +32,6 @@ export const obtenerCategoria = async (req, res) => {
 };
 
 
-=======
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
 // Registrar una nueva categoría
 export const registrarCategoria = async (req, res) => {
   try {
@@ -57,7 +49,6 @@ export const registrarCategoria = async (req, res) => {
       error: error
     });
   }
-<<<<<<< HEAD
 };
 
 // Eliminar una categoría por su ID
@@ -105,6 +96,3 @@ export const actualizarCategoria = async (req, res) => {
     });
   }
 };
-=======
-};
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725

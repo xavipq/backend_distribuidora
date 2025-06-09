@@ -1,6 +1,5 @@
 import { pool } from '../db.js';
 
-<<<<<<< HEAD
 // Obtener una compra específica por id_compra
 export const obtenerCompraPorId = async (req, res) => {
   try {
@@ -29,8 +28,6 @@ export const obtenerCompraPorId = async (req, res) => {
   }
 };
 
-=======
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
 // Obtener todas las compras con sus detalles, mostrando nombres, IDs y subtotal
 export const obtenerComprasConDetalles = async (req, res) => {
   try {
@@ -57,7 +54,6 @@ export const obtenerComprasConDetalles = async (req, res) => {
       error: error
     });
   }
-<<<<<<< HEAD
 };
 
 // Obtener todas las compras
@@ -181,6 +177,3 @@ export const actualizarCompra = async (req, res) => {
     res.status(500).json({ mensaje: 'Error al actualizar la compra', error: error.message });
   }
 };
-=======
-};
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725

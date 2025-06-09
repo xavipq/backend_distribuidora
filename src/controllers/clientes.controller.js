@@ -1,11 +1,7 @@
 import { pool } from '../db.js';
 
 // Obtener todos los clientes
-<<<<<<< HEAD
 export const obtenerClientes = async (req, res) => {
-=======
-export const obtenerClientes= async (req, res) => {
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
   try {
     const [result] = await pool.query('SELECT * FROM Clientes');
     res.json(result);
@@ -15,7 +11,6 @@ export const obtenerClientes= async (req, res) => {
       error: error
     });
   }
-<<<<<<< HEAD
 };
 
 // Obtener un cliente por su id
@@ -115,6 +110,4 @@ export const actualizarCliente = async (req, res) => {
       error: error,
     });
   }
-=======
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
 };

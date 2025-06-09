@@ -1,5 +1,4 @@
 import { Router } from 'express';
-<<<<<<< HEAD
 import { obtenerCompraPorId, obtenerComprasConDetalles, obtenerCompras, eliminarCompra, registrarCompra, actualizarCompra } from '../controllers/compras.controller.js';
 
 const router = Router();
@@ -23,13 +22,3 @@ router.post('/registrarcompra', registrarCompra);
 router.patch('/actualizarcompra/:id_compra', actualizarCompra);
 
 export default router;
-=======
-import { obtenerComprasConDetalles } from '../controllers/compras.controller.js';
-
-const router = Router();
-
-// Ruta para obtener todas las compras con detalles
-router.get('/compras', obtenerComprasConDetalles);
-
-export default router;
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725

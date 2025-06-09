@@ -1,12 +1,7 @@
 import { pool } from '../db.js';
 
-<<<<<<< HEAD
 // Obtener todas los usuarios
 export const obtenerUsuarios = async (req, res) => {
-=======
-// Obtener todos los usuarios
-export const obtenerUsuarios= async (req, res) => {
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
   try {
     const [result] = await pool.query('SELECT * FROM Usuarios');
     res.json(result);
@@ -18,7 +13,6 @@ export const obtenerUsuarios= async (req, res) => {
   }
 };
 
-<<<<<<< HEAD
 // Obtener un usuario por su id
 export const obtenerUsuario = async (req, res) => {
   try {
@@ -27,16 +21,6 @@ export const obtenerUsuario = async (req, res) => {
     if (result.length <= 0) {
       return res.status(404).json({
         mensaje: `Error al leer los datos. El ID ${req.params.id} del usuario no encontrado.`
-=======
-// Obtener un usuario por su ID
-export const obtenerUsuario = async (req, res) => {
-  try {
-    const [result] = await pool.query('SELECT * FROM Usuarios WHERE usuario = ?', [req.params.user]);
-    
-    if (result.length <= 0) {
-      return res.status(404).json({
-        mensaje: `Error al leer los datos. El usuario ${req.params.user} no fue encontrado.`
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
       });
     }
     res.json(result[0]);
@@ -47,7 +31,6 @@ export const obtenerUsuario = async (req, res) => {
   }
 };
 
-<<<<<<< HEAD
 // Registrar un nuevo usuario
 export const registrarUsuario = async (req, res) => {
   try {
@@ -114,18 +97,5 @@ export const actualizarUsuario = async (req, res) => {
       mensaje: 'Error al actualizar el usuario.',
       error: error,
     });
-=======
-// Verificar si un usuario existe
-export const verificarUsuario = async (req, res) => {
-  try {
-    const { usuario, contraseña } = req.body;
-    const [result] = await pool.query(
-      'SELECT * FROM Usuarios WHERE usuario = ? AND contraseña = ?',
-      [usuario, contraseña]
-    );
-    res.json(result.length > 0); // Devuelve true o false directamente
-  } catch (error) {
-    res.status(500).json(false);
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
   }
 };

@@ -28,7 +28,6 @@ export const obtenerVentasConDetalles = async (req, res) => {
       error: error
     });
   }
-<<<<<<< HEAD
 };
 
 // Obtener todas las ventas
@@ -159,6 +158,3 @@ export const actualizarVenta = async (req, res) => {
     res.status(500).json({ mensaje: 'Error al actualizar la venta', error: error.message });
   }
 };
-=======
-};
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
