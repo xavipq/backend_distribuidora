@@ -29,6 +29,7 @@ export const obtenerProducto = async (req, res) => {
       mensaje: 'Ha ocurrido un error al leer los datos del producto.'
     });
   }
+<<<<<<< HEAD
 };
 
 // Registrar un nuevo producto
@@ -119,3 +120,6 @@ export const actualizarProducto = async (req, res) => {
     });
   }
 };
+=======
+};
+>>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
