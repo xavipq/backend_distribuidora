@@ -10,6 +10,9 @@ import rutasEmpleados from './routes/empleados.routes.js'
 import rutasDetallesVentas from './routes/detalles_ventas.routes.js';
 import rutasDetallesCompras from'./routes/detalles_compras.routes.js';
 import rutasEstadisticas from './routes/estadisticas.routes.js';
+import rutasIA from './routes/ia.routes.js';
+
+app.use('/ia', rutasIA);
 
 const app = express();
 
