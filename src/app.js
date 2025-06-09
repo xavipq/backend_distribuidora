@@ -6,17 +6,12 @@ import rutasProductos from './routes/productos.routes.js';
 import rutasCategorias from './routes/categorias.routes.js';
 import rutasVentas from './routes/ventas.routes.js'
 import rutasCompras from './routes/compras.routes.js'
-<<<<<<< HEAD
 import rutasEmpleados from './routes/empleados.routes.js'
 import rutasDetallesVentas from './routes/detalles_ventas.routes.js';
 import rutasDetallesCompras from'./routes/detalles_compras.routes.js';
 import rutasEstadisticas from './routes/estadisticas.routes.js';
 import rutasIA from './routes/ia.routes.js';
 
-app.use('/ia', rutasIA);
-
-=======
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
 const app = express();
 
 // Habilitar CORS para cualquier origen
@@ -33,18 +28,14 @@ app.use('/api', rutasProductos);
 app.use('/api', rutasCategorias);
 app.use('/api', rutasVentas);
 app.use('/api', rutasCompras);
-<<<<<<< HEAD
 app.use('/api', rutasEmpleados);
 app.use('/api', rutasDetallesVentas);
 app.use('/api', rutasDetallesCompras);
 app.use('/api', rutasEstadisticas);
+app.use('/ia', rutasIA);
 
 app.use(express.json({ limit: '10mb' })); // Aumenta a 10 MB
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
-=======
-
-
->>>>>>> d29e664a0a0c9667128772e1a5df7099ce98c725
 
 
 

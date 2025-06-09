@@ -22,4 +22,3 @@ export const consultarConIA = async (req, res) => {
     });
   }
 };
-
